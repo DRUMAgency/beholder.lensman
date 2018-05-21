@@ -6,6 +6,7 @@ module Lensman
   def self.record(type, identity, details)
     conn = Faraday.new(url: Lensman.configuration.url) do |c|
       c.token_auth(Lensman.configuration.api_key)
+      c.request :json
       c.adapter Faraday.default_adapter
     end
 
@@ -17,6 +18,6 @@ module Lensman
       original: details[:original],
       result: details[:result],
       other: details[:other]
-    ).body['response']
+    )
   end
 end
