@@ -1,5 +1,6 @@
 require "lensman/version"
 require "lensman/configuration"
+require "faraday"
 
 module Lensman
   def self.record(type, identity, details)
