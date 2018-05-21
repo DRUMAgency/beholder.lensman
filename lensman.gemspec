@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "lensman/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "Lensman"
+  spec.name          = "lensman"
   spec.version       = Lensman::VERSION
   spec.authors       = ["David Briggs"]
   spec.email         = ["david.briggs@drumagency.com"]
